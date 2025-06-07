@@ -34,7 +34,7 @@ export default function Form() {
     const validators = {
         firstName : val => /^[A-Za-z]{2,}$/.test(val) || 'First Name must be at least 2 letters.',
         lastName : val => /^[A-Za-z]{2,}$/.test(val) || 'Last name must be at least 2 letters.',
-        username : val => /^[A-Za-zo-9_]{4,}$/.test(val) || 'Username must be at least 4 characters and no special chars.',
+        username : val => /^[A-Za-z0-9_]{4,}$/.test(val) || 'Username must be at least 4 characters and no special chars.',
         email : val => /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(val) || 'Invalid email address.',
         password : val => /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/.test(val) || 'Password must be 6+ chars with letters and numbers.',
         phonecode : val=> /^\+\d{1,4}$/.test(val) || 'Invalid country code . ',
